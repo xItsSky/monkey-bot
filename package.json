@@ -1,0 +1,32 @@
+{
+  "name": "monkeybot",
+  "version": "1.0.0",
+  "description": "This is a basic bot which send periodically some monkey gift",
+  "main": "bot.js",
+  "scripts": {
+    "start": "env-cmd node bot.js",
+    "dev": "env-cmd nodemon bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xItsSky/monkey-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xItsSky/monkey-bot/issues"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "monkey"
+  ],
+  "author": "ItsSky and F3Y0D",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "dependencies": {
+    "discord-api-types": "^0.37.46",
+    "discord.js": "^14.11.0",
+    "gif-search": "^3.0.3",
+    "node-cron": "^3.0.2"
+  }
+}
