@@ -28,5 +28,9 @@
     "discord.js": "^14.11.0",
     "gif-search": "^3.0.3",
     "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6"
   }
 }

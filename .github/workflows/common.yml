@@ -1,0 +1,34 @@
+---
+name: Lint
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+    paths:
+      - "**/*.kt"
+
+env:
+  NODE_VERSION: 18.16.0
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "📲 Linting Task triggered ... }"
+      - run: echo "📦 Setup linting environment ... }"
+      - name: Node install
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Npm Install
+        run: npm ci
+
+      - run: echo "🔎 Linting Task triggered ... }"
+      - name: Lint
+        run: npm run lint
